@@ -1,0 +1,65 @@
+/*
+Theme Name: Cafe Breton
+description: >-
+  Twenty Fifteen Child Theme
+Author: Richard Hpa
+Author URI: http://richard-hpa.com
+Template: twentytwenty
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: twenty-fifteen-child
+*/
+
+
+.customMenuList{
+    text-align: center;
+}
+
+.customProductList{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.customProductItem{
+    max-width: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px){
+    .customProductItem{
+        max-width: 50%;
+        width: 50%;
+    }
+}
+
+.customMenuHeading{
+    background-color: #cd2653;
+    color: white;
+    padding: 10px;
+    margin: 20px 0 ;
+}
+
+.customMenuHeading h5{
+    margin: 0;
+    padding: 0;
+}
+
+.customProductItem{
+    padding: 15px 0;
+}
+
+.customProductItem * {
+    padding: 0;
+    margin: 0;
+}
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
+    float: right
+}
+
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
+    float: left;
+}
