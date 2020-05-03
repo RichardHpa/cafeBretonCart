@@ -1,6 +1,8 @@
 <?php
 //* Code goes here
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 function enqueue_parent_styles() {
@@ -43,3 +45,22 @@ add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
     unset($fields['account']['account_password-2']);
     return $fields;
 }
+
+
+add_filter( 'woocommerce_get_order_item_totals', 'add_pickup_time_to_emails', 10, 2 );
+
+function add_pickup_time_to_emails( $total_rows, $myorder_obj ) {
+    $total_rows['pickup_time'] = array(
+       'label' => __( 'Pick Up Time', 'woocommerce' ),
+       'value'   => get_post_meta($myorder_obj->get_id())['_billing_pickuptime'][0]
+    );
+
+return $total_rows;
+}
+
+function bbloomer_remove_product_tabs( $tabs ) {
+    unset( $tabs['additional_information'] );
+    return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'bbloomer_remove_product_tabs', 9999 );

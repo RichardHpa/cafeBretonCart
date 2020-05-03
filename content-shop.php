@@ -28,10 +28,13 @@ if ( $terms && !is_wp_error( $terms ) ) :
             <div class="customProductList">
                 <?php while ( $productItems->have_posts() ) : $productItems->the_post(); ?>
                     <?php $productDetails = wc_get_product( get_the_id() );
+
                     ?>
                     <div class="customProductItem">
                         <h6><a href="<?= the_permalink(); ?>"><?= the_title(); ?> - $<?= $productDetails->get_price() ?></a></h6>
-                        <p><?= the_content(); ?></p>
+                        <p>
+                            <?= $productDetails->get_short_description() ?>
+                        </p>
                     </div>
 
                 <?php endwhile;?>

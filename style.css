@@ -17,6 +17,11 @@ Text Domain: twenty-fifteen-child
     text-align: center;
 }
 
+.customMenuList *{
+    font-weight: 700;
+    font-size: 16px;
+}
+
 .customProductList{
     display: flex;
     flex-wrap: wrap;
@@ -36,7 +41,7 @@ Text Domain: twenty-fifteen-child
 }
 
 .customMenuHeading{
-    background-color: #cd2653;
+    background-color: #81c9c7;
     color: white;
     padding: 10px;
     margin: 20px 0 ;
@@ -62,4 +67,38 @@ Text Domain: twenty-fifteen-child
 
 .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
     float: left;
+}
+
+.product::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.woocommerce-page .content-area .page .entry-header .entry-title,
+.woocommerce #primary .product .entry-summary .entry-title,
+.woocommerce div.product .woocommerce-tabs .entry-content h2{
+    font-family: inherit !important;
+}
+
+
+.woocommerce div.product form.cart .button:before{
+    content: '' !important;
+    font-size: 0;
+    color: #555;
+    font-family: 'Font Awesome\ 5 Free' !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.single_add_to_cart_button{
+    background-color: #81c9c7 !important;
+    border-color: #81c9c7 !important;
+    color: white !important;
+}
+
+.single_add_to_cart_button:hover{
+    background-color: white !important;
+    color: #81c9c7 !important;
 }
