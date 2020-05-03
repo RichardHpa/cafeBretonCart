@@ -20,7 +20,7 @@ function customThemeEnqueues(){
       wp_enqueue_style('timepickerCDN', '//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css', array(), '1.3.5', 'all');
       wp_enqueue_script('timepickerCDNScript', '//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js', array('jquery'), '1.3.5', true);
 
-      wp_enqueue_script('customScript', get_stylesheet_directory_uri() . '/customScript.js', array('jquery'), '1.0.0', true);
+      wp_enqueue_script('customScript', get_stylesheet_directory_uri() . '/customScript.js', array('jquery'), '1.0.1', true);
 }
 
 add_action('wp_enqueue_scripts', 'customThemeEnqueues', 11);

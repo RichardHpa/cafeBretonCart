@@ -1,7 +1,7 @@
 var coeff = 1000 * 60 * 15;
 var date = new Date();  //or use any other date
 var rounded = new Date(Math.ceil(date.getTime() / coeff) * coeff)
-console.log(rounded);
+// console.log(rounded);
 
 
 jQuery('input[name="billing_pickuptime"]').timepicker({
