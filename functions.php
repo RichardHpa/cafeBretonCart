@@ -60,6 +60,7 @@ return $total_rows;
 
 function bbloomer_remove_product_tabs( $tabs ) {
     unset( $tabs['additional_information'] );
+    unset( $tabs['description'] );
     return $tabs;
 }
 

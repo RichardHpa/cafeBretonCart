@@ -102,3 +102,11 @@ Text Domain: twenty-fifteen-child
     background-color: white !important;
     color: #81c9c7 !important;
 }
+
+
+.woocommerce-checkout #customer_details,
+.woocommerce-checkout #order_review,
+.woocommerce-checkout #order_review_heading{
+    float: none !important;
+    width: 100% !important;
+}

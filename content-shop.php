@@ -33,7 +33,10 @@ if ( $terms && !is_wp_error( $terms ) ) :
                     <div class="customProductItem">
                         <h6><a href="<?= the_permalink(); ?>"><?= the_title(); ?> - $<?= $productDetails->get_price() ?></a></h6>
                         <p>
-                            <?= $productDetails->get_short_description() ?>
+                            <?php
+                             // echo $productDetails->get_short_description();
+                             the_content();
+                            ?>
                         </p>
                     </div>
 
